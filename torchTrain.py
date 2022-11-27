@@ -66,7 +66,6 @@ jaccard = utils.metrics.IoU(threshold = .5)
 device = torch.device('cuda')
 model = smp.Unet(in_channels=3, classes=1, activation='sigmoid', encoder_name='resnet18')
 model.to(device)
-model.train()
 optimizer = optim.Adam(model.parameters(), lr = 0.0007)
 
 
